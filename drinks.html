@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ÉLITE | Drinks</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+font-family:'Poppins',sans-serif;
+background:#0b0b0b;
+color:white;
+
+}
+
+
+header{
+
+position:fixed;
+top:0;
+width:100%;
+z-index:100;
+
+}
+
+
+
+nav{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px 8%;
+
+background:rgba(0,0,0,.75);
+
+backdrop-filter:blur(10px);
+
+}
+
+
+
+.logo{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:40px;
+
+color:#d4af37;
+
+letter-spacing:4px;
+
+}
+
+
+.logo i{
+
+margin-right:10px;
+
+}
+
+
+
+nav ul{
+
+display:flex;
+gap:35px;
+list-style:none;
+
+}
+
+
+
+nav a{
+
+text-decoration:none;
+color:white;
+
+transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+color:#d4af37;
+
+}
+
+
+
+
+/* Header */
+
+
+.page-header{
+
+height:45vh;
+
+
+background:
+
+linear-gradient(
+rgba(0,0,0,.65),
+rgba(0,0,0,.65)
+),
+
+url("https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=1600");
+
+
+background-size:cover;
+
+background-position:center;
+
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+
+}
+
+
+
+.page-header h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:75px;
+
+color:#d4af37;
+
+}
+
+
+
+.page-header p{
+
+color:#ddd;
+
+font-size:18px;
+
+}
+
+
+
+
+
+/* Drinks Section */
+
+
+.food-section{
+
+padding:80px 8%;
+
+}
+
+
+
+.food-title{
+
+text-align:center;
+
+margin-bottom:50px;
+
+}
+
+
+
+.food-title h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:55px;
+
+color:#d4af37;
+
+}
+
+
+
+
+.food-container{
+
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:40px;
+
+
+}
+
+
+
+
+
+.food-card{
+
+background:#171717;
+
+border-radius:20px;
+
+overflow:hidden;
+
+display:flex;
+
+transition:.4s;
+
+}
+
+
+
+.food-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+
+0 15px 35px rgba(212,175,55,.3);
+
+}
+
+
+
+.food-card img{
+
+width:250px;
+
+height:250px;
+
+object-fit:cover;
+
+}
+
+
+
+.food-info{
+
+padding:25px;
+
+}
+
+
+
+.food-info h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:28px;
+
+color:#d4af37;
+
+}
+
+
+
+.food-info h4{
+
+margin-top:15px;
+
+color:#ddd;
+
+}
+
+
+
+.food-info p{
+
+font-size:14px;
+
+line-height:1.7;
+
+color:#aaa;
+
+margin:10px 0;
+
+}
+
+
+
+
+.price{
+
+font-size:20px;
+
+font-weight:600;
+
+}
+
+
+
+.cart-btn{
+
+
+display:inline-block;
+
+margin-top:15px;
+
+padding:10px 25px;
+
+background:#d4af37;
+
+color:black;
+
+text-decoration:none;
+
+border-radius:30px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+
+
+.cart-btn:hover{
+
+background:white;
+
+}
+
+
+
+
+footer{
+
+background:black;
+
+padding:30px;
+
+text-align:center;
+
+color:#aaa;
+
+}
+
+
+
+footer h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:35px;
+
+color:#d4af37;
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+.food-container{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.food-card{
+
+flex-direction:column;
+
+}
+
+
+
+.food-card img{
+
+width:100%;
+
+}
+
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<header>
+
+
+<nav>
+
+
+<div class="logo">
+
+<i class="fa-solid fa-utensils"></i>
+
+ÉLITE
+
+</div>
+
+
+<ul>
+
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+
+<li>
+<a href="menu.html">Menu</a>
+</li>
+
+
+</ul>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+
+<section class="page-header">
+
+
+<div>
+
+
+<h1>Drinks</h1>
+
+
+<p>
+
+Refreshing beverages crafted for every occasion
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="food-section">
+
+
+<div class="food-title">
+
+<h2>Signature Beverages</h2>
+
+</div>
+
+
+
+
+<div class="food-container">
+
+
+
+
+
+<!-- 1 -->
+
+
+<div class="food-card">
+
+
+<img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600">
+
+
+<div class="food-info">
+
+
+<h3>Blue Lagoon</h3>
+
+
+<h4>Ingredients:</h4>
+
+
+<p>
+
+Blue curacao syrup, lemon juice,
+soda and ice.
+
+</p>
+
+
+<p>
+
+A refreshing blue citrus drink
+with a sweet tropical flavour.
+
+</p>
+
+
+<div class="price">₹220</div>
+
+
+<a href="cart.html" class="cart-btn">
+Add To Cart
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- 2 -->
+
+
+<div class="food-card">
+
+
+<img src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=600">
+
+
+<div class="food-info">
+
+
+<h3>Classic Mojito</h3>
+
+
+<h4>Ingredients:</h4>
+
+
+<p>
+
+Mint leaves, lime, sugar,
+soda and crushed ice.
+
+</p>
+
+
+<p>
+
+Refreshing mint flavoured drink
+with a perfect citrus taste.
+
+</p>
+
+
+<div class="price">₹180</div>
+
+
+<a href="cart.html" class="cart-btn">
+Add To Cart
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- 3 -->
+
+
+<div class="food-card">
+
+
+<img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600">
+
+
+<div class="food-info">
+
+
+<h3>Cold Coffee</h3>
+
+
+<h4>Ingredients:</h4>
+
+
+<p>
+
+Coffee, milk, sugar,
+ice cream and chocolate.
+
+</p>
+
+
+<p>
+
+Rich creamy coffee blended
+with chilled flavours.
+
+</p>
+
+
+<div class="price">₹200</div>
+
+
+<a href="cart.html" class="cart-btn">
+Add To Cart
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- 4 -->
+
+
+<div class="food-card">
+
+
+<img src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?w=600">
+
+
+<div class="food-info">
+
+
+<h3>Cappuccino</h3>
+
+
+<h4>Ingredients:</h4>
+
+
+<p>
+
+Espresso coffee, milk foam
+and cocoa powder.
+
+</p>
+
+
+<p>
+
+Classic Italian coffee with
+a smooth creamy texture.
+
+</p>
+
+
+<div class="price">₹160</div>
+
+
+<a href="cart.html" class="cart-btn">
+Add To Cart
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- 5 -->
+
+
+<div class="food-card">
+
+
+<img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600">
+
+
+<div class="food-info">
+
+
+<h3>Fresh Lime Soda</h3>
+
+
+<h4>Ingredients:</h4>
+
+
+<p>
+
+Fresh lime, soda water,
+sugar and mint.
+
+</p>
+
+
+<p>
+
+A refreshing sparkling drink
+perfect for summer.
+
+</p>
+
+
+<div class="price">₹120</div>
+
+
+<a href="cart.html" class="cart-btn">
+Add To Cart
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- 6 -->
+
+
+<div class="food-card">
+
+
+<img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?w=600">
+
+
+<div class="food-info">
+
+
+<h3>Strawberry Milkshake</h3>
+
+
+<h4>Ingredients:</h4>
+
+
+<p>
+
+Strawberry, milk, ice cream
+and whipped cream.
+
+</p>
+
+
+<p>
+
+Creamy strawberry shake
+with a rich fruity flavour.
+
+</p>
+
+
+<div class="price">₹250</div>
+
+
+<a href="cart.html" class="cart-btn">
+Add To Cart
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+
+<h2>ÉLITE Restaurant</h2>
+
+
+<p>
+
+Smart Restaurant Menu System
+
+</p>
+
+
+</footer>
+
+
+
+</body>
+
+</html>
