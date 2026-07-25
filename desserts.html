@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ÉLITE | Desserts</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+background:#0b0b0b;
+color:white;
+
+}
+
+
+header{
+
+position:fixed;
+top:0;
+width:100%;
+z-index:100;
+
+}
+
+
+nav{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(10px);
+
+}
+
+
+.logo{
+
+font-family:'Cormorant Garamond',serif;
+font-size:40px;
+color:#d4af37;
+letter-spacing:4px;
+
+}
+
+
+.logo i{
+
+margin-right:10px;
+
+}
+
+
+nav ul{
+
+display:flex;
+gap:35px;
+list-style:none;
+
+}
+
+
+nav a{
+
+text-decoration:none;
+color:white;
+
+}
+
+
+nav a:hover{
+
+color:#d4af37;
+
+}
+
+
+
+/* Header */
+
+
+.page-header{
+
+height:45vh;
+
+background:
+
+linear-gradient(
+rgba(0,0,0,.65),
+rgba(0,0,0,.65)
+),
+
+url("https://images.unsplash.com/photo-1551024506-0bccd828d307?w=1600");
+
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+}
+
+
+.page-header h1{
+
+font-family:'Cormorant Garamond',serif;
+font-size:75px;
+color:#d4af37;
+
+}
+
+
+.page-header p{
+
+color:#ddd;
+font-size:18px;
+
+}
+
+
+
+/* Food Section */
+
+
+.food-section{
+
+padding:80px 8%;
+
+}
+
+
+.food-title{
+
+text-align:center;
+margin-bottom:50px;
+
+}
+
+
+.food-title h2{
+
+font-family:'Cormorant Garamond',serif;
+font-size:55px;
+color:#d4af37;
+
+}
+
+
+
+.food-container{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:40px;
+
+}
+
+
+
+.food-card{
+
+background:#171717;
+border-radius:20px;
+overflow:hidden;
+display:flex;
+transition:.4s;
+
+}
+
+
+
+.food-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+0 15px 35px rgba(212,175,55,.3);
+
+}
+
+
+
+.food-card img{
+
+width:250px;
+height:250px;
+object-fit:cover;
+
+}
+
+
+
+.food-info{
+
+padding:25px;
+
+}
+
+
+
+.food-info h3{
+
+font-family:'Cormorant Garamond',serif;
+font-size:28px;
+color:#d4af37;
+
+}
+
+
+
+.food-info h4{
+
+margin-top:15px;
+color:#ddd;
+
+}
+
+
+
+.food-info p{
+
+font-size:14px;
+line-height:1.7;
+color:#aaa;
+margin:10px 0;
+
+}
+
+
+
+.price{
+
+font-size:20px;
+font-weight:600;
+
+}
+
+
+
+.cart-btn{
+
+display:inline-block;
+margin-top:15px;
+
+padding:10px 25px;
+
+background:#d4af37;
+
+color:black;
+
+text-decoration:none;
+
+border-radius:30px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+
+
+.cart-btn:hover{
+
+background:white;
+
+}
+
+
+
+footer{
+
+background:black;
+padding:30px;
+text-align:center;
+color:#aaa;
+
+}
+
+
+footer h2{
+
+font-family:'Cormorant Garamond',serif;
+color:#d4af37;
+font-size:35px;
+
+}
+
+
+
+
+@media(max-width:900px){
+
+.food-container{
+
+grid-template-columns:1fr;
+
+}
+
+
+.food-card{
+
+flex-direction:column;
+
+}
+
+
+.food-card img{
+
+width:100%;
+
+}
+
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav>
+
+
+<div class="logo">
+
+<i class="fa-solid fa-utensils"></i>
+
+ÉLITE
+
+</div>
+
+
+<ul>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+
+<li>
+<a href="menu.html">Menu</a>
+</li>
+
+</ul>
+
+
+</nav>
+
+</header>
+
+
+
+
+<section class="page-header">
+
+
+<div>
+
+<h1>Desserts</h1>
+
+<p>
+Finish your dining experience with our sweet creations
+</p>
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="food-section">
+
+
+<div class="food-title">
+
+<h2>Chef's Special Desserts</h2>
+
+</div>
+
+
+
+<div class="food-container">
+
+
+
+<!-- 1 -->
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600">
+
+<div class="food-info">
+
+<h3>Chocolate Lava Cake</h3>
+
+<h4>Ingredients:</h4>
+
+<p>
+Dark chocolate, flour, eggs,
+sugar and butter.
+</p>
+
+<p>
+Warm chocolate cake with a rich
+molten chocolate centre.
+</p>
+
+<div class="price">₹280</div>
+
+<a href="cart.html" class="cart-btn">
+Add To Cart
+</a>
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- 2 -->
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600">
+
+<div class="food-info">
+
+<h3>New York Cheesecake</h3>
+
+<h4>Ingredients:</h4>
+
+<p>
+Cream cheese, biscuit base,
+cream and vanilla.
+</p>
+
+<p>
+Classic creamy cheesecake
+with a smooth texture.
+</p>
+
+<div class="price">₹350</div>
+
+<a href="cart.html" class="cart-btn">
+Add To Cart
+</a>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<!-- 3 -->
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1589119908995-c6837fa14848?w=600">
+
+<div class="food-info">
+
+<h3>Gulab Jamun</h3>
+
+<h4>Ingredients:</h4>
+
+<p>
+Milk solids, sugar syrup,
+cardamom and saffron.
+</p>
+
+<p>
+Soft traditional Indian sweet
+served warm.
+</p>
+
+<div class="price">₹180</div>
+
+<a href="cart.html" class="cart-btn">
+Add To Cart
+</a>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- 4 -->
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600">
+
+<div class="food-info">
+
+<h3>Tiramisu</h3>
+
+<h4>Ingredients:</h4>
+
+<p>
+Coffee, mascarpone cheese,
+cocoa and sponge cake.
+</p>
+
+<p>
+Italian dessert with rich coffee
+and creamy flavours.
+</p>
+
+<div class="price">₹420</div>
+
+<a href="cart.html" class="cart-btn">
+Add To Cart
+</a>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- 5 -->
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600">
+
+<div class="food-info">
+
+<h3>Ice Cream Sundae</h3>
+
+<h4>Ingredients:</h4>
+
+<p>
+Ice cream, chocolate syrup,
+nuts and whipped cream.
+</p>
+
+<p>
+A refreshing dessert topped
+with delicious flavours.
+</p>
+
+<div class="price">₹250</div>
+
+<a href="cart.html" class="cart-btn">
+Add To Cart
+</a>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- 6 -->
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600">
+
+<div class="food-info">
+
+<h3>Fruit Tart</h3>
+
+<h4>Ingredients:</h4>
+
+<p>
+Fresh fruits, pastry cream,
+flour and butter.
+</p>
+
+<p>
+Crispy pastry filled with
+fresh seasonal fruits.
+</p>
+
+<div class="price">₹300</div>
+
+<a href="cart.html" class="cart-btn">
+Add To Cart
+</a>
+
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+<footer>
+
+<h2>ÉLITE Restaurant</h2>
+
+<p>Smart Restaurant Menu System</p>
+
+</footer>
+
+
+
+</body>
+
+</html>
